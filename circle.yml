@@ -1,0 +1,11 @@
+deployment:
+  production:
+    branch: master
+    commands:
+      - grunt
+      - RACKSPACE_CONTAINER=$PROD_CONTAINER grunt deploy
+  staging:
+    branch: staging
+    commands:
+      - grunt
+      - RACKSPACE_CONTAINER=$STAGE_CONTAINER grunt deploy
